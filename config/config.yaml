@@ -120,7 +120,7 @@ rss:
     - id: "ruanyifeng"
       name: "阮一峰的网络日志"
       url: "http://www.ruanyifeng.com/blog/atom.xml"
-      enabled: false                  # 禁用
+      enabled: true                  # 禁用
       # max_age_days: 3               # 示例：推送 3 天内的文章（更新较慢的博客）
      
     - id: "yahoo-finance"
@@ -279,7 +279,7 @@ display:
   # 两者共享此处的平台/RSS 配置，但开关互相独立（可只开 AI 分析、不推送展示）
   standalone:
     platforms: ["zhihu", "wallstreetcn-hot"]     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
-    rss_feeds: []                     # RSS 源 ID 列表（如 ["hacker-news"]）
+    rss_feeds: ["hacker-news"]                     # RSS 源 ID 列表（如 ["hacker-news"]）
     max_items: 20                     # 每个源最多展示条数（0=不限制）
 
 
@@ -415,7 +415,7 @@ ai:
   # 完整列表: https://docs.litellm.ai/docs/providers
   # 如果你对于看英文文档比较头疼，那么可以点击页面右下角的 【Ask AI】 ,用中文询问怎么配置 
   
-  model: "deepseek/deepseek-chat"
+  model: "google/gemma-4-31b-it:free"
 
   api_key: ""                       # API Key（建议使用环境变量 AI_API_KEY）
   
